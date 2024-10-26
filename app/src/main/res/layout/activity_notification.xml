@@ -20,4 +20,10 @@
         android:text="Selected Items Will Be Shown Here"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/sendEmailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send mail" />
+
 </LinearLayout>
