@@ -15,12 +15,16 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkBoxPizza, checkBoxBurger, checkBoxSandwich;
     private EditText editTextPizzaQuantity, editTextBurgerQuantity, editTextSandwichQuantity;
     private ArrayList<String[]> selectedItems = new ArrayList<>();
+  private String customerName, customerEmail,customerPhone,totalPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+       EditText customerName1= findViewById(R.id.customerName);
+       EditText customerEmail1= findViewById(R.id.customerEmail);
+       EditText customerPhone1= findViewById(R.id.customerPhone);
+       EditText totalPrice1= findViewById(R.id.totalPrice);
         // Initialize checkboxes and edit texts
         checkBoxPizza = findViewById(R.id.checkBoxPizza);
         checkBoxBurger = findViewById(R.id.checkBoxBurger);
@@ -35,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 selectedItems.clear();  // Clear previous selections
-
-                // Check each item, if selected, add it with its quantity
+               customerName=customerName1.getText().toString();
+               customerEmail=customerEmail1.getText().toString();
+               customerPhone=customerPhone1.getText().toString();
+               totalPrice=totalPrice1.getText().toString();
+               // Check each item, if selected, add it with its quantity
                 if (checkBoxPizza.isChecked()) {
                     String quantity = editTextPizzaQuantity.getText().toString();
                     if (!quantity.isEmpty()) {
@@ -60,8 +67,12 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!selectedItems.isEmpty()) {
                     // Pass selectedItems to SecondActivity
-                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    Intent intent = new Intent(MainActivity.this, Notification.class);
                     intent.putExtra("selectedItems", selectedItems);
+                    intent.putExtra("customerName", customerName);
+                    intent.putExtra("customerEmail", customerEmail);
+                    intent.putExtra("customerPhone", customerPhone);
+                    intent.putExtra("totalPrice", totalPrice);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Please select at least one item with a quantity", Toast.LENGTH_SHORT).show();

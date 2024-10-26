@@ -11,6 +11,38 @@
         android:padding="8dp">
 
         <!-- Checkbox and Quantity for Pizza -->
+        <EditText
+            android:id="@+id/customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/customerEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/customerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Phone"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/totalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="cost"
+            android:inputType="text" />
+
         <CheckBox
             android:id="@+id/checkBoxPizza"
             android:layout_width="wrap_content"
@@ -60,4 +92,7 @@
             android:text="Submit"
             android:layout_marginTop="16dp" />
     </LinearLayout>
+
+
+
 </ScrollView>
