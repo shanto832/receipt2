@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Checkbox and Quantity for Pizza -->
+        <CheckBox
+            android:id="@+id/checkBoxPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza" />
+
+        <EditText
+            android:id="@+id/editTextPizzaQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter quantity for Pizza"
+            android:inputType="number" />
+
+        <!-- Checkbox and Quantity for Burger -->
+        <CheckBox
+            android:id="@+id/checkBoxBurger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Burger" />
+
+        <EditText
+            android:id="@+id/editTextBurgerQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter quantity for Burger"
+            android:inputType="number" />
+
+        <!-- Checkbox and Quantity for Sandwich -->
+        <CheckBox
+            android:id="@+id/checkBoxSandwich"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sandwich" />
+
+        <EditText
+            android:id="@+id/editTextSandwichQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter quantity for Sandwich"
+            android:inputType="number" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
